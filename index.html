@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Rate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .rate {
+            font-weight: bold;
+        }
+        .price {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="text-align:center; margin-top: 5%;">Milk Rate Calculator</h2>
+    <label for="weight">Weight (L):</label>
+    <input type="number" id="weight" placeholder="Enter weight in L" required>
+    
+    <label for="fat">Fat (%):</label>
+    <input type="number" id="fat" placeholder="Enter fat percentage" required>
+    
+    <label for="snf">SNF (%):</label>
+    <input type="number" id="snf" placeholder="Enter SNF percentage" required>
+    
+    <button onclick="calculate()">Calculate</button>
+    
+    <div style="display: flex; justify-content: space-between;">
+    <div class="rate" id="rate"></div>
+    <div class="price" id="price"></div>
+    </div>
+</div>
+
+<div>
+    <p style="text-align: center; color:#0056b3;">OSAM, KESARI (+91-9525544734)</p>
+</div>
+
+<script>
+    function calculate() {
+        const fat = parseFloat(document.getElementById('fat').value);
+        const snf = parseFloat(document.getElementById('snf').value);
+        const weight = parseFloat(document.getElementById('weight').value);
+        var Finallrate = 0;
+        var Finallprice = 0;
+
+        // if fat 3.0 AND snf (8.0-8.5)
+        if(Number(fat) == 3 && Number(snf) == 80){
+            Finallrate = 32;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3 && Number(snf) == 81){
+            Finallrate = 32.26;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3 && Number(snf) == 82){
+            Finallrate = 32.51;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3 && Number(snf) == 83){
+            Finallrate = 32.77;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3 && Number(snf) == 84){
+            Finallrate = 33.02;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3 && Number(snf) == 85){
+            Finallrate = 33.28;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3 && Number(snf) > 85){
+            Finallrate = 33.28;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.1 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.1 && Number(snf) == 80){
+            Finallrate = 32.38;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.1 && Number(snf) == 81){
+            Finallrate = 32.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.1 && Number(snf) == 82){
+            Finallrate = 32.90;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.1 && Number(snf) == 83){
+            Finallrate = 33.15;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.1 && Number(snf) == 84){
+            Finallrate = 33.41;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.1 && Number(snf) == 85){
+            Finallrate = 33.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.1 && Number(snf) > 85){
+            Finallrate = 33.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.2 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.2 && Number(snf) == 80){
+            Finallrate = 32.77;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.2 && Number(snf) == 81){
+            Finallrate = 33.02;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.2 && Number(snf) == 82){
+            Finallrate = 33.28;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.2 && Number(snf) == 83){
+            Finallrate = 33.54;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.2 && Number(snf) == 84){
+            Finallrate = 33.79;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.2 && Number(snf)== 85){
+            Finallrate = 34.05;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.2 && Number(snf) > 85){
+            Finallrate = 34.05;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.3 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.3 && Number(snf) == 80){
+            Finallrate = 33.15;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.3 && Number(snf) == 81){
+            Finallrate = 33.41;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.3 && Number(snf) == 82){
+            Finallrate = 33.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.3 && Number(snf) == 83){
+            Finallrate = 33.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.3 && Number(snf) == 84){
+            Finallrate = 34.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.3 && Number(snf) == 85){
+            Finallrate = 34.43;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.3 && Number(snf) > 85){
+            Finallrate = 34.43;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.4 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.4 && Number(snf) == 80){
+            Finallrate = 33.54;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.4 && Number(snf) == 81){
+            Finallrate = 33.79;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.4 && Number(snf) == 82){
+            Finallrate = 34.05;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.4 && Number(snf) == 83){
+            Finallrate = 34.30;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.4 && Number(snf) == 84){
+            Finallrate = 34.56;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.4 && Number(snf) == 85){
+            Finallrate = 34.82;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.4 && Number(snf) > 85){
+            Finallrate = 34.82;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.5 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.5 && Number(snf) == 80){
+            Finallrate = 33.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.5 && Number(snf) == 81){
+            Finallrate = 34.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.5 && Number(snf) == 82){
+            Finallrate = 34.43;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.5 && Number(snf) == 83){
+            Finallrate = 34.69;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.5 && Number(snf) == 84){
+            Finallrate = 34.94;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.5 && Number(snf) == 85){
+            Finallrate = 35.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.5 && Number(snf) > 85){
+            Finallrate = 35.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.6 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.6 && Number(snf) == 80){
+            Finallrate = 34.30;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.6 && Number(snf) == 81){
+            Finallrate = 34.56;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.6 && Number(snf) == 82){
+            Finallrate = 34.82;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.6 && Number(snf) == 83){
+            Finallrate = 35.07;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.6 && Number(snf) == 84){
+            Finallrate = 35.33;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.6 && Number(snf) == 85){
+            Finallrate = 35.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.6 && Number(snf) > 85){
+            Finallrate = 35.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.7 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.7 && Number(snf) == 80){
+            Finallrate = 34.69;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.7 && Number(snf) == 81){
+            Finallrate = 34.94;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.7 && Number(snf) == 82){
+            Finallrate = 35.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.7 && Number(snf) == 83){
+            Finallrate = 35.46;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.7 && Number(snf) == 84){
+            Finallrate = 35.71;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.7 && Number(snf) == 85){
+            Finallrate = 35.97;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.7 && Number(snf) > 85){
+            Finallrate = 35.97;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.8 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.8 && Number(snf) == 80){
+            Finallrate = 35.07;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.8 && Number(snf) == 81){
+            Finallrate = 35.33;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.8 && Number(snf) == 82){
+            Finallrate = 35.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.8 && Number(snf) == 83){
+            Finallrate = 35.84;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.8 && Number(snf) == 84){
+            Finallrate = 36.10;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.8 && Number(snf) == 85){
+            Finallrate = 36.35;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.8 && Number(snf) > 85){
+            Finallrate = 36.35;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 3.9 AND snf (8.0-8.5)
+        else if(Number(fat) == 3.9 && Number(snf) == 80){
+            Finallrate = 35.46;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.9 && Number(snf) == 81){
+            Finallrate = 35.71;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.9 && Number(snf) == 82){
+            Finallrate = 35.97;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.9 && Number(snf) == 83){
+            Finallrate = 36.22;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.9 && Number(snf) == 84){
+            Finallrate = 36.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.9 && Number(snf) == 85){
+            Finallrate = 36.74;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 3.9 && Number(snf) > 85){
+            Finallrate = 36.74;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4 AND snf (8.0-8.5)
+        else if(Number(fat) == 4 && Number(snf) == 80){
+            Finallrate = 35.84;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4 && Number(snf) == 81){
+            Finallrate = 36.10;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4 && Number(snf) == 82){
+            Finallrate = 36.35;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4 && Number(snf) == 83){
+            Finallrate = 36.61;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4 && Number(snf) == 84){
+            Finallrate = 36.86;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4 && Number(snf) == 85){
+            Finallrate = 37.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4 && Number(snf) > 85){
+            Finallrate = 37.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.1 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.1 && Number(snf) == 80){
+            Finallrate = 36.22;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.1 && Number(snf) == 81){
+            Finallrate = 36.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.1 && Number(snf) == 82){
+            Finallrate = 36.74;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.1 && Number(snf) == 83){
+            Finallrate = 36.99;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.1 && Number(snf) == 84){
+            Finallrate = 37.25;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.1 && Number(snf) == 85){
+            Finallrate = 37.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.1 && Number(snf) > 85){
+            Finallrate = 37.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.2 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.2 && Number(snf) == 80){
+            Finallrate = 36.61;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.2 && Number(snf) == 81){
+            Finallrate = 36.86;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.2 && Number(snf) == 82){
+            Finallrate = 37.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.2 && Number(snf) == 83){
+            Finallrate = 37.38;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.2 && Number(snf) == 84){
+            Finallrate = 37.63;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.2 && Number(snf) == 85){
+            Finallrate = 37.89;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.2 && Number(snf) > 85){
+            Finallrate = 37.89;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.3 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.3 && Number(snf) == 80){
+            Finallrate = 36.99;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.3 && Number(snf) == 81){
+            Finallrate = 37.25;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.3 && Number(snf) == 82){
+            Finallrate = 37.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.3 && Number(snf) == 83){
+            Finallrate = 37.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.3 && Number(snf) == 84){
+            Finallrate = 38.02;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.3 && Number(snf) == 85){
+            Finallrate = 38.27;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.3 && Number(snf) > 85){
+            Finallrate = 38.27;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.4 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.4 && Number(snf) == 80){
+            Finallrate = 37.38;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.4 && Number(snf) == 81){
+            Finallrate = 37.63;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.4 && Number(snf) == 82){
+            Finallrate = 37.89;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.4 && Number(snf) == 83){
+            Finallrate = 38.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.4 && Number(snf) == 84){
+            Finallrate = 38.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.4 && Number(snf) == 85){
+            Finallrate = 38.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.4 && Number(snf) > 85){
+            Finallrate = 38.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.5 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.5 && Number(snf) == 80){
+            Finallrate = 37.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.5 && Number(snf) == 81){
+            Finallrate = 38.02;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.5 && Number(snf) == 82){
+            Finallrate = 38.27;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.5 && Number(snf) == 83){
+            Finallrate = 38.53;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.5 && Number(snf) == 84){
+            Finallrate = 38.78;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.5 && Number(snf) == 85){
+            Finallrate = 39.04;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.5 && Number(snf) > 85){
+            Finallrate = 39.04;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.6 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.6 && Number(snf) == 80){
+            Finallrate = 38.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.6 && Number(snf) == 81){
+            Finallrate = 38.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.6 && Number(snf) == 82){
+            Finallrate = 38.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.6 && Number(snf) == 83){
+            Finallrate = 38.91;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.6 && Number(snf) == 84){
+            Finallrate = 39.17;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.6 && Number(snf) == 85){
+            Finallrate = 39.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.6 && Number(snf) > 85){
+            Finallrate = 39.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.7 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.7 && Number(snf) == 80){
+            Finallrate = 38.53;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.7 && Number(snf) == 81){
+            Finallrate = 38.78;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.7 && Number(snf) == 82){
+            Finallrate = 39.04;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.7 && Number(snf) == 83){
+            Finallrate = 39.30;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.7 && Number(snf) == 84){
+            Finallrate = 39.55;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.7 && Number(snf) == 85){
+            Finallrate = 39.81;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.7 && Number(snf) > 85){
+            Finallrate = 39.81;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.8 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.8 && Number(snf) == 80){
+            Finallrate = 38.91;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.8 && Number(snf) == 81){
+            Finallrate = 39.17;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.8 && Number(snf) == 82){
+            Finallrate = 39.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.8 && Number(snf) == 83){
+            Finallrate = 39.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.8 && Number(snf) == 84){
+            Finallrate = 39.94;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.8 && Number(snf) == 85){
+            Finallrate = 40.19;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.8 && Number(snf) > 85){
+            Finallrate = 40.19;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 4.9 AND snf (8.0-8.5)
+        else if(Number(fat) == 4.9 && Number(snf) == 80){
+            Finallrate = 39.30;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.9 && Number(snf) == 81){
+            Finallrate = 39.55;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.9 && Number(snf) == 82){
+            Finallrate = 39.81;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.9 && Number(snf) == 83){
+            Finallrate = 40.06;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.9 && Number(snf) == 84){
+            Finallrate = 40.32;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.9 && Number(snf) == 85){
+            Finallrate = 40.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 4.9 && Number(snf) > 85){
+            Finallrate = 40.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5 AND snf (8.0-8.5)
+        else if(Number(fat) == 5 && Number(snf) == 80){
+            Finallrate = 39.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5 && Number(snf) == 81){
+            Finallrate = 39.94;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5 && Number(snf) == 82){
+            Finallrate = 40.19;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5 && Number(snf) == 83){
+            Finallrate = 40.45;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5 && Number(snf) == 84){
+            Finallrate = 40.70;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5 && Number(snf) == 85){
+            Finallrate = 40.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5 && Number(snf) > 85){
+            Finallrate = 40.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.1 AND snf (8.0-8.5)
+        else if(Number(fat) == 5.1 && Number(snf) == 80){
+            Finallrate = 40.06;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.1 && Number(snf) == 81){
+            Finallrate = 40.32;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.1 && Number(snf) == 82){
+            Finallrate = 40.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.1 && Number(snf) == 83){
+            Finallrate = 40.83;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.1 && Number(snf) == 84){
+            Finallrate = 41.09;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.1 && Number(snf) == 85){
+            Finallrate = 41.34;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.1 && Number(snf) > 85){
+            Finallrate = 41.34;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.2 AND snf (8.0-8.5)
+        else if(Number(fat) == 5.2 && Number(snf) == 80){
+            Finallrate = 40.45;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.2 && Number(snf) == 81){
+            Finallrate = 40.70;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.2 && Number(snf) == 82){
+            Finallrate = 40.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.2 && Number(snf) == 83){
+            Finallrate = 41.22;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.2 && Number(snf) == 84){
+            Finallrate = 41.47;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.2 && Number(snf) == 85){
+            Finallrate = 41.73;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.2 && Number(snf) > 85){
+            Finallrate = 41.73;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.3 AND snf (8.0-8.5)
+        else if(Number(fat) == 5.3 && Number(snf) == 80){
+            Finallrate = 40.83;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.3 && Number(snf) == 81){
+            Finallrate = 41.09;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.3 && Number(snf) == 82){
+            Finallrate = 41.34;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.3 && Number(snf) == 83){
+            Finallrate = 41.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.3 && Number(snf) == 84){
+            Finallrate = 41.86;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.3 && Number(snf) == 85){
+            Finallrate = 42.11;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.3 && Number(snf) > 85){
+            Finallrate = 42.11;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.4 AND snf (8.0-8.5)
+        else if(Number(fat) == 5.4 && Number(snf) == 80){
+            Finallrate = 41.22;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.4 && Number(snf) == 81){
+            Finallrate = 41.47;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.4 && Number(snf) == 82){
+            Finallrate = 41.73;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.4 && Number(snf) == 83){
+            Finallrate = 41.98;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.4 && Number(snf) == 84){
+            Finallrate = 42.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.4 && Number(snf) == 85){
+            Finallrate = 42.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.4 && Number(snf) > 85){
+            Finallrate = 42.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.5 AND snf (8.4-9.0)
+        else if(Number(fat) == 5.5 && Number(snf) == 84){
+            Finallrate = 42.62;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.5 && Number(snf) == 85){
+            Finallrate = 42.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.5 && Number(snf) == 86){
+            Finallrate = 43.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.5 && Number(snf) == 87){
+            Finallrate = 43.39;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.5 && Number(snf) == 88){
+            Finallrate = 43.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.5 && Number(snf) == 89){
+            Finallrate = 43.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.5 && Number(snf) == 90){
+            Finallrate = 43.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.5 && Number(snf) > 90){
+            Finallrate = 43.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.6 AND snf (8.4-9.0)
+        else if(Number(fat) == 5.6 && Number(snf) == 84){
+            Finallrate = 43.01;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.6 && Number(snf) == 85){
+            Finallrate = 43.26;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.6 && Number(snf) == 86){
+            Finallrate = 43.52;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.6 && Number(snf) == 87){
+            Finallrate = 43.78;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.6 && Number(snf) == 88){
+            Finallrate = 44.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.6 && Number(snf) == 89){
+            Finallrate = 43.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.6 && Number(snf) == 90){
+            Finallrate = 43.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.6 && Number(snf) > 90){
+            Finallrate = 43.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.7 AND snf (8.4-9.0)
+        else if(Number(fat) == 5.7 && Number(snf) == 84){
+            Finallrate = 43.39;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.7 && Number(snf) == 85){
+            Finallrate = 43.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.7 && Number(snf) == 86){
+            Finallrate = 43.90;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.7 && Number(snf) == 87){
+            Finallrate = 44.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.7 && Number(snf) == 88){
+            Finallrate = 44.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.7 && Number(snf) == 89){
+            Finallrate = 44.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.7 && Number(snf) == 90){
+            Finallrate = 44.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.7 && Number(snf) > 90){
+            Finallrate = 44.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.8 AND snf (8.4-9.0)
+        else if(Number(fat) == 5.8 && Number(snf) == 84){
+            Finallrate = 43.78;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.8 && Number(snf) == 85){
+            Finallrate = 44.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.8 && Number(snf) == 86){
+            Finallrate = 44.29;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.8 && Number(snf) == 87){
+            Finallrate = 44.54;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.8 && Number(snf) == 88){
+            Finallrate = 44.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.8 && Number(snf) == 89){
+            Finallrate = 44.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.8 && Number(snf) == 90){
+            Finallrate = 44.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.8 && Number(snf) > 90){
+            Finallrate = 44.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 5.9 AND snf (8.4-9.0)
+        else if(Number(fat) == 5.9 && Number(snf) == 84){
+            Finallrate = 44.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.9 && Number(snf) == 85){
+            Finallrate = 44.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.9 && Number(snf) == 86){
+            Finallrate = 44.67;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.9 && Number(snf) == 87){
+            Finallrate = 44.93;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.9 && Number(snf) == 88){
+            Finallrate = 45.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.9 && Number(snf) == 89){
+            Finallrate = 45.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.9 && Number(snf) == 90){
+            Finallrate = 45.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 5.9 && Number(snf) > 90){
+            Finallrate = 45.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.0 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.0 && Number(snf) == 84){
+            Finallrate = 44.23;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.0 && Number(snf) == 85){
+            Finallrate = 44.46;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.0 && Number(snf) == 86){
+            Finallrate = 44.69;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.0 && Number(snf) == 87){
+            Finallrate = 44.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.0 && Number(snf) == 88){
+            Finallrate = 45.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.0 && Number(snf) == 89){
+            Finallrate = 45.37;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.0 && Number(snf) == 90){
+            Finallrate = 45.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.0 && Number(snf) > 90){
+            Finallrate = 45.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.1 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.1 && Number(snf) == 84){
+            Finallrate = 44.97;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.1 && Number(snf) == 85){
+            Finallrate = 45.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.1 && Number(snf) == 86){
+            Finallrate = 45.43;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.1 && Number(snf) == 87){
+            Finallrate = 45.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.1 && Number(snf) == 88){
+            Finallrate = 45.90;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.1 && Number(snf) == 89){
+            Finallrate = 46.13;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.1 && Number(snf) == 90){
+            Finallrate = 46.36;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.1 && Number(snf) > 90){
+            Finallrate = 46.36;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.2 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.2 && Number(snf) == 84){
+            Finallrate = 45.71;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.2 && Number(snf) == 85){
+            Finallrate = 45.94;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.2 && Number(snf) == 86){
+            Finallrate = 46.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.2 && Number(snf) == 87){
+            Finallrate = 46.41;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.2 && Number(snf) == 88){
+            Finallrate = 46.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.2 && Number(snf) == 89){
+            Finallrate = 46.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.2 && Number(snf) == 90){
+            Finallrate = 47.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.2 && Number(snf) > 90){
+            Finallrate = 47.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.3 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.3 && Number(snf) == 84){
+            Finallrate = 46.44;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.3 && Number(snf) == 85){
+            Finallrate = 46.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.3 && Number(snf) == 86){
+            Finallrate = 46.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.3 && Number(snf) == 87){
+            Finallrate = 47.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.3 && Number(snf) == 88){
+            Finallrate = 47.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.3 && Number(snf) == 89){
+            Finallrate = 47.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.3 && Number(snf) == 90){
+            Finallrate = 47.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.3 && Number(snf) > 90){
+            Finallrate = 47.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.4 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.4 && Number(snf) == 84){
+            Finallrate = 47.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.4 && Number(snf) == 85){
+            Finallrate = 47.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.4 && Number(snf) == 86){
+            Finallrate = 47.67;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.4 && Number(snf) == 87){
+            Finallrate = 47.91;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.4 && Number(snf) == 88){
+            Finallrate = 48.15;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.4 && Number(snf) == 89){
+            Finallrate = 48.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.4 && Number(snf) == 90){
+            Finallrate = 48.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.4 && Number(snf) > 90){
+            Finallrate = 48.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.5 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.5 && Number(snf) == 84){
+            Finallrate = 47.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.5 && Number(snf) == 85){
+            Finallrate = 48.17;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.5 && Number(snf) == 86){
+            Finallrate = 48.41;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.5 && Number(snf) == 87){
+            Finallrate = 48.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.5 && Number(snf) == 88){
+            Finallrate = 48.91;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.5 && Number(snf) == 89){
+            Finallrate = 49.15;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.5 && Number(snf) == 90){
+            Finallrate = 49.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.5 && Number(snf) > 90){
+            Finallrate = 49.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.6 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.6 && Number(snf) == 84){
+            Finallrate = 48.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.6 && Number(snf) == 85){
+            Finallrate = 48.91;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.6 && Number(snf) == 86){
+            Finallrate = 49.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.6 && Number(snf) == 87){
+            Finallrate = 49.41;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.6 && Number(snf) == 88){
+            Finallrate = 49.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.6 && Number(snf) == 89){
+            Finallrate = 49.91;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.6 && Number(snf) == 90){
+            Finallrate = 50.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.6 && Number(snf) > 90){
+            Finallrate = 50.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.7 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.7 && Number(snf) == 84){
+            Finallrate = 49.39;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.7 && Number(snf) == 85){
+            Finallrate = 49.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.7 && Number(snf) == 86){
+            Finallrate = 49.90;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.7 && Number(snf) == 87){
+            Finallrate = 50.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.7 && Number(snf) == 88){
+            Finallrate = 50.41;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.7 && Number(snf) == 89){
+            Finallrate = 50.67;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.7 && Number(snf) == 90){
+            Finallrate = 50.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.7 && Number(snf) > 90){
+            Finallrate = 50.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.8 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.8 && Number(snf) == 84){
+            Finallrate = 50.13;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.8 && Number(snf) == 85){
+            Finallrate = 50.39;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.8 && Number(snf) == 86){
+            Finallrate = 50.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.8 && Number(snf) == 87){
+            Finallrate = 50.90;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.8 && Number(snf) == 88){
+            Finallrate = 51.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.8 && Number(snf) == 89){
+            Finallrate = 51.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.8 && Number(snf) == 90){
+            Finallrate = 51.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.8 && Number(snf) > 90){
+            Finallrate = 51.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 6.9 AND snf (8.4-9.0)
+        else if(Number(fat) == 6.9 && Number(snf) == 84){
+            Finallrate = 50.87;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.9 && Number(snf) == 85){
+            Finallrate = 51.13;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.9 && Number(snf) == 86){
+            Finallrate = 51.39;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.9 && Number(snf) == 87){
+            Finallrate = 51.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.9 && Number(snf) == 88){
+            Finallrate = 51.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.9 && Number(snf) == 89){
+            Finallrate = 52.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.9 && Number(snf) == 90){
+            Finallrate = 52.44;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 6.9 && Number(snf) > 90){
+            Finallrate = 52.44;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.0 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.0 && Number(snf) == 84){
+            Finallrate = 51.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.0 && Number(snf) == 85){
+            Finallrate = 51.87;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.0 && Number(snf) == 86){
+            Finallrate = 52.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.0 && Number(snf) == 87){
+            Finallrate = 52.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.0 && Number(snf) == 88){
+            Finallrate = 52.67;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.0 && Number(snf) == 89){
+            Finallrate = 52.93;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.0 && Number(snf) == 90){
+            Finallrate = 53.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.0 && Number(snf) > 90){
+            Finallrate = 53.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.1 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.1 && Number(snf) == 84){
+            Finallrate = 52.34;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.1 && Number(snf) == 85){
+            Finallrate = 52.61;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.1 && Number(snf) == 86){
+            Finallrate = 52.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.1 && Number(snf) == 87){
+            Finallrate = 53.15;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.1 && Number(snf) == 88){
+            Finallrate = 53.42;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.1 && Number(snf) == 89){
+            Finallrate = 53.69;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.1 && Number(snf) == 90){
+            Finallrate = 53.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.1 && Number(snf) > 90){
+            Finallrate = 53.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.2 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.2 && Number(snf) == 84){
+            Finallrate = 53.08;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.2 && Number(snf) == 85){
+            Finallrate = 53.35;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.2 && Number(snf) == 86){
+            Finallrate = 53.63;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.2 && Number(snf) == 87){
+            Finallrate = 53.90;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.2 && Number(snf) == 88){
+            Finallrate = 54.17;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.2 && Number(snf) == 89){
+            Finallrate = 54.45;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.2 && Number(snf) == 90){
+            Finallrate = 54.72;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.2 && Number(snf) > 90){
+            Finallrate = 54.72;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.3 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.3 && Number(snf) == 84){
+            Finallrate = 53.82;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.3 && Number(snf) == 85){
+            Finallrate = 54.09;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.3 && Number(snf) == 86){
+            Finallrate = 54.37;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.3 && Number(snf) == 87){
+            Finallrate = 54.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.3 && Number(snf) == 88){
+            Finallrate = 54.93;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.3 && Number(snf) == 89){
+            Finallrate = 55.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.3 && Number(snf) == 90){
+            Finallrate = 55.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.3 && Number(snf) > 90){
+            Finallrate = 55.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.4 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.4 && Number(snf) == 84){
+            Finallrate = 54.55;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.4 && Number(snf) == 85){
+            Finallrate = 54.83;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.4 && Number(snf) == 86){
+            Finallrate = 55.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.4 && Number(snf) == 87){
+            Finallrate = 55.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.4 && Number(snf) == 88){
+            Finallrate = 55.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.4 && Number(snf) == 89){
+            Finallrate = 55.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.4 && Number(snf) == 90){
+            Finallrate = 56.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.4 && Number(snf) > 90){
+            Finallrate = 56.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.5 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.5 && Number(snf) == 84){
+            Finallrate = 55.29;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.5 && Number(snf) == 85){
+            Finallrate = 55.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.5 && Number(snf) == 86){
+            Finallrate = 55.86;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.5 && Number(snf) == 87){
+            Finallrate = 56.15;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.5 && Number(snf) == 88){
+            Finallrate = 56.43;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.5 && Number(snf) == 89){
+            Finallrate = 56.72;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.5 && Number(snf) == 90){
+            Finallrate = 57.00;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.5 && Number(snf) > 90){
+            Finallrate = 57.00;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.6 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.6 && Number(snf) == 84){
+            Finallrate = 56.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.6 && Number(snf) == 85){
+            Finallrate = 56.32;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.6 && Number(snf) == 86){
+            Finallrate = 56.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.6 && Number(snf) == 87){
+            Finallrate = 56.89;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.6 && Number(snf) == 88){
+            Finallrate = 57.18;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.6 && Number(snf) == 89){
+            Finallrate = 57.47;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.6 && Number(snf) == 90){
+            Finallrate = 57.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.6 && Number(snf) > 90){
+            Finallrate = 57.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.7 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.7 && Number(snf) == 84){
+            Finallrate = 56.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.7 && Number(snf) == 85){
+            Finallrate = 57.06;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.7 && Number(snf) == 86){
+            Finallrate = 57.35;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.7 && Number(snf) == 87){
+            Finallrate = 57.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.7 && Number(snf) == 88){
+            Finallrate = 57.93;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.7 && Number(snf) == 89){
+            Finallrate = 58.23;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.7 && Number(snf) == 90){
+            Finallrate = 58.52;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.7 && Number(snf) > 90){
+            Finallrate = 58.52;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.8 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.8 && Number(snf) == 84){
+            Finallrate = 57.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.8 && Number(snf) == 85){
+            Finallrate = 57.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.8 && Number(snf) == 86){
+            Finallrate = 58.09;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.8 && Number(snf) == 87){
+            Finallrate = 58.39;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.8 && Number(snf) == 88){
+            Finallrate = 58.69;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.8 && Number(snf) == 89){
+            Finallrate = 58.98;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.8 && Number(snf) == 90){
+            Finallrate = 59.28;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.8 && Number(snf) > 90){
+            Finallrate = 59.28;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 7.9 AND snf (8.4-9.0)
+        else if(Number(fat) == 7.9 && Number(snf) == 84){
+            Finallrate = 58.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.9 && Number(snf) == 85){
+            Finallrate = 58.54;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.9 && Number(snf) == 86){
+            Finallrate = 58.84;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.9 && Number(snf) == 87){
+            Finallrate = 59.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.9 && Number(snf) == 88){
+            Finallrate = 59.44;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.9 && Number(snf) == 89){
+            Finallrate = 59.74;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.9 && Number(snf) == 90){
+            Finallrate = 60.04;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 7.9 && Number(snf) > 90){
+            Finallrate = 60.04;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.0 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.0 && Number(snf) == 84){
+            Finallrate = 58.98;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.0 && Number(snf) == 85){
+            Finallrate = 59.28;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.0 && Number(snf) == 86){
+            Finallrate = 59.58;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.0 && Number(snf) == 87){
+            Finallrate = 59.89;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.0 && Number(snf) == 88){
+            Finallrate = 60.19;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.0 && Number(snf) == 89){
+            Finallrate = 60.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.0 && Number(snf) == 90){
+            Finallrate = 60.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.0 && Number(snf) > 90){
+            Finallrate = 60.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.1 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.1 && Number(snf) == 84){
+            Finallrate = 59.71;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.1 && Number(snf) == 85){
+            Finallrate = 60.02;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.1 && Number(snf) == 86){
+            Finallrate = 60.33;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.1 && Number(snf) == 87){
+            Finallrate = 60.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.1 && Number(snf) == 88){
+            Finallrate = 60.94;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.1 && Number(snf) == 89){
+            Finallrate = 61.25;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.1 && Number(snf) == 90){
+            Finallrate = 61.56;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.1 && Number(snf) > 90){
+            Finallrate = 61.56;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.2 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.2 && Number(snf) == 84){
+            Finallrate = 60.45;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.2 && Number(snf) == 85){
+            Finallrate = 60.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.2 && Number(snf) == 86){
+            Finallrate = 61.07;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.2 && Number(snf) == 87){
+            Finallrate = 61.39;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.2 && Number(snf) == 88){
+            Finallrate = 61.70;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.2 && Number(snf) == 89){
+            Finallrate = 62.01;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.2 && Number(snf) == 90){
+            Finallrate = 62.32;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.2 && Number(snf) > 90){
+            Finallrate = 62.32;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.3 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.3 && Number(snf) == 84){
+            Finallrate = 61.19;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.3 && Number(snf) == 85){
+            Finallrate = 61.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.3 && Number(snf) == 86){
+            Finallrate = 61.82;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.3 && Number(snf) == 87){
+            Finallrate = 62.13;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.3 && Number(snf) == 88){
+            Finallrate = 62.45;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.3 && Number(snf) == 89){
+            Finallrate = 62.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.3 && Number(snf) == 90){
+            Finallrate = 62.08;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.3 && Number(snf) > 90){
+            Finallrate = 62.08;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.4 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.4 && Number(snf) == 84){
+            Finallrate = 61.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.4 && Number(snf) == 85){
+            Finallrate = 62.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.4 && Number(snf) == 86){
+            Finallrate = 62.56;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.4 && Number(snf) == 87){
+            Finallrate = 62.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.4 && Number(snf) == 88){
+            Finallrate = 63.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.4 && Number(snf) == 89){
+            Finallrate = 63.52;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.4 && Number(snf) == 90){
+            Finallrate = 63.84;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.4 && Number(snf) > 90){
+            Finallrate = 63.84;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.5 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.5 && Number(snf) == 84){
+            Finallrate = 62.66;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.5 && Number(snf) == 85){
+            Finallrate = 62.99;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.5 && Number(snf) == 86){
+            Finallrate = 63.31;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.5 && Number(snf) == 87){
+            Finallrate = 63.63;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.5 && Number(snf) == 88){
+            Finallrate = 63.95;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.5 && Number(snf) == 89){
+            Finallrate = 64.28;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.5 && Number(snf) == 90){
+            Finallrate = 64.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.5 && Number(snf) > 90){
+            Finallrate = 64.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.6 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.6 && Number(snf) == 84){
+            Finallrate = 63.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.6 && Number(snf) == 85){
+            Finallrate = 63.73;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.6 && Number(snf) == 86){
+            Finallrate = 64.05;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.6 && Number(snf) == 87){
+            Finallrate = 64.38;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.6 && Number(snf) == 88){
+            Finallrate = 64.71;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.6 && Number(snf) == 89){
+            Finallrate = 65.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.6 && Number(snf) == 90){
+            Finallrate = 65.36;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.6 && Number(snf) > 90){
+            Finallrate = 65.36;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.7 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.7 && Number(snf) == 84){
+            Finallrate = 64.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.7 && Number(snf) == 85){
+            Finallrate = 64.47;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.7 && Number(snf) == 86){
+            Finallrate = 64.80;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.7 && Number(snf) == 87){
+            Finallrate = 65.13;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.7 && Number(snf) == 88){
+            Finallrate = 65.46;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.7 && Number(snf) == 89){
+            Finallrate = 65.79;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.7 && Number(snf) == 90){
+            Finallrate = 66.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.7 && Number(snf) > 90){
+            Finallrate = 66.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.8 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.8 && Number(snf) == 84){
+            Finallrate = 64.87;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.8 && Number(snf) == 85){
+            Finallrate = 65.21;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.8 && Number(snf) == 86){
+            Finallrate = 65.54;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.8 && Number(snf) == 87){
+            Finallrate = 65.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.8 && Number(snf) == 88){
+            Finallrate = 66.21;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.8 && Number(snf) == 89){
+            Finallrate = 66.55;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.8 && Number(snf) == 90){
+            Finallrate = 66.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.8 && Number(snf) > 90){
+            Finallrate = 66.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 8.9 AND snf (8.4-9.0)
+        else if(Number(fat) == 8.9 && Number(snf) == 84){
+            Finallrate = 65.61;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.9 && Number(snf) == 85){
+            Finallrate = 65.95;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.9 && Number(snf) == 86){
+            Finallrate = 66.29;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.9 && Number(snf) == 87){
+            Finallrate = 66.63;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.9 && Number(snf) == 88){
+            Finallrate = 66.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.9 && Number(snf) == 89){
+            Finallrate = 67.30;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.9 && Number(snf) == 90){
+            Finallrate = 67.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 8.9 && Number(snf) > 90){
+            Finallrate = 67.64;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.0 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.0 && Number(snf) == 84){
+            Finallrate = 66.35;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.0 && Number(snf) == 85){
+            Finallrate = 66.69;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.0 && Number(snf) == 86){
+            Finallrate = 67.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.0 && Number(snf) == 87){
+            Finallrate = 67.37;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.0 && Number(snf) == 88){
+            Finallrate = 67.72;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.0 && Number(snf) == 89){
+            Finallrate = 68.06;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.0 && Number(snf) == 90){
+            Finallrate = 68.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.0 && Number(snf) > 90){
+            Finallrate = 68.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.1 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.1 && Number(snf) == 84){
+            Finallrate = 67.09;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.1 && Number(snf) == 85){
+            Finallrate = 67.43;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.1 && Number(snf) == 86){
+            Finallrate = 67.78;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.1 && Number(snf) == 87){
+            Finallrate = 68.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.1 && Number(snf) == 88){
+            Finallrate = 68.47;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.1 && Number(snf) == 89){
+            Finallrate = 68.81;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.1 && Number(snf) == 90){
+            Finallrate = 69.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.1 && Number(snf) > 90){
+            Finallrate = 69.16;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.2 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.2 && Number(snf) == 84){
+            Finallrate = 67.82;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.2 && Number(snf) == 85){
+            Finallrate = 68.17;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.2 && Number(snf) == 86){
+            Finallrate = 68.52;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.2 && Number(snf) == 87){
+            Finallrate = 68.87;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.2 && Number(snf) == 88){
+            Finallrate = 69.22;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.2 && Number(snf) == 89){
+            Finallrate = 69.57;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.2 && Number(snf) == 90){
+            Finallrate = 69.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.2 && Number(snf) > 90){
+            Finallrate = 69.92;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.3 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.3 && Number(snf) == 84){
+            Finallrate = 68.56;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.3 && Number(snf) == 85){
+            Finallrate = 68.91;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.3 && Number(snf) == 86){
+            Finallrate = 69.27;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.3 && Number(snf) == 87){
+            Finallrate = 69.62;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.3 && Number(snf) == 88){
+            Finallrate = 69.97;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.3 && Number(snf) == 89){
+            Finallrate = 70.33;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.3 && Number(snf) == 90){
+            Finallrate = 70.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.3 && Number(snf) > 90){
+            Finallrate = 70.68;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.4 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.4 && Number(snf) == 84){
+            Finallrate = 69.30;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.4 && Number(snf) == 85){
+            Finallrate = 69.65;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.4 && Number(snf) == 86){
+            Finallrate = 70.01;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.4 && Number(snf) == 87){
+            Finallrate = 70.37;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.4 && Number(snf) == 88){
+            Finallrate = 70.73;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.4 && Number(snf) == 89){
+            Finallrate = 71.08;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.4 && Number(snf) == 90){
+            Finallrate = 71.44;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.4 && Number(snf) > 90){
+            Finallrate = 71.44;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.5 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.5 && Number(snf) == 84){
+            Finallrate = 70.03;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.5 && Number(snf) == 85){
+            Finallrate = 70.40;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.5 && Number(snf) == 86){
+            Finallrate = 70.76;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.5 && Number(snf) == 87){
+            Finallrate = 71.12;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.5 && Number(snf) == 88){
+            Finallrate = 71.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.5 && Number(snf) == 89){
+            Finallrate = 71.84;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.5 && Number(snf) == 90){
+            Finallrate = 72.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.5 && Number(snf) > 90){
+            Finallrate = 72.20;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.6 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.6 && Number(snf) == 84){
+            Finallrate = 70.77;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.6 && Number(snf) == 85){
+            Finallrate = 71.14;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.6 && Number(snf) == 86){
+            Finallrate = 71.50;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.6 && Number(snf) == 87){
+            Finallrate = 71.87;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.6 && Number(snf) == 88){
+            Finallrate = 72.23;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.6 && Number(snf) == 89){
+            Finallrate = 72.60;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.6 && Number(snf) == 90){
+            Finallrate = 72.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.6 && Number(snf) > 90){
+            Finallrate = 72.96;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.7 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.7 && Number(snf) == 84){
+            Finallrate = 71.51;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.7 && Number(snf) == 85){
+            Finallrate = 71.88;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.7 && Number(snf) == 86){
+            Finallrate = 72.25;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.7 && Number(snf) == 87){
+            Finallrate = 72.61;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.7 && Number(snf) == 88){
+            Finallrate = 72.98;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.7 && Number(snf) == 89){
+            Finallrate = 73.35;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.7 && Number(snf) == 90){
+            Finallrate = 73.72;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.7 && Number(snf) > 90){
+            Finallrate = 73.72;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.8 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.8 && Number(snf) == 84){
+            Finallrate = 72.25;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.8 && Number(snf) == 85){
+            Finallrate = 72.62;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.8 && Number(snf) == 86){
+            Finallrate = 72.99;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.8 && Number(snf) == 87){
+            Finallrate = 73.36;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.8 && Number(snf) == 88){
+            Finallrate = 73.74;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.8 && Number(snf) == 89){
+            Finallrate = 74.11;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.8 && Number(snf) == 90){
+            Finallrate = 74.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.8 && Number(snf) > 90){
+            Finallrate = 74.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 9.9 AND snf (8.4-9.0)
+        else if(Number(fat) == 9.9 && Number(snf) == 84){
+            Finallrate = 72.98;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.9 && Number(snf) == 85){
+            Finallrate = 73.36;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.9 && Number(snf) == 86){
+            Finallrate = 73.74;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.9 && Number(snf) == 87){
+            Finallrate = 74.11;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.9 && Number(snf) == 88){
+            Finallrate = 74.49;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.9 && Number(snf) == 89){
+            Finallrate = 74.86;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.9 && Number(snf) == 90){
+            Finallrate = 75.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 9.9 && Number(snf) > 90){
+            Finallrate = 75.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }
+        // if fat 10.0 AND snf (8.4-9.0)
+        else if(Number(fat) == 10.0 && Number(snf) == 84){
+            Finallrate = 73.72;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 10.0 && Number(snf) == 85){
+            Finallrate = 74.10;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 10.0 && Number(snf) == 86){
+            Finallrate = 74.48;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 10.0 && Number(snf) == 87){
+            Finallrate = 74.86;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 10.0 && Number(snf) == 88){
+            Finallrate = 75.24;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 10.0 && Number(snf) == 89){
+            Finallrate = 75.62;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 10.0 && Number(snf) == 90){
+            Finallrate = 76.00;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else if(Number(fat) == 10.0 && Number(snf) > 90){
+            Finallrate = 76.00;
+            Finallprice = Number(Finallrate) * Number(weight);
+        }else{
+            Finallrate = 0;
+            Finallprice = 0;
+        }
+        const rate = `Rate: ${Finallrate.toFixed(2)}`;
+        const price = `Price: ${Finallprice.toFixed(2)}`;
+
+        document.getElementById('rate').innerText = rate;
+        document.getElementById('price').innerText = price;
+    }
+</script>
+
+</body>
+</html>
